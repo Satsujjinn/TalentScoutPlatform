@@ -5,7 +5,8 @@ require 'geocoder'
 require 'rest-client'
 require 'open-uri'
 
-Mongoid.load!('config/mongoid.yml')
+ENV['RACK_ENV'] ||= 'development'
+Mongoid.load!('config/mongoid.yml', ENV['RACK_ENV'])
 
 # models
 require_relative 'app/models/vendor/vendor'

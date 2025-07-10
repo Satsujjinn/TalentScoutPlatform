@@ -18,6 +18,7 @@ gem 'rubocop', require: false
 gem 'sinatra', '~> 2.1'
 gem 'sinatra-simple-navigation', '~> 4.0'
 gem 'versionomy'
+gem 'i18n', '~> 1.13.0'
 
 group :test do
   gem 'database_cleaner-mongoid'
