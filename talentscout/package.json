@@ -1,0 +1,26 @@
+{
+  "name": "talentscout-monorepo",
+  "private": true,
+  "packageManager": "pnpm@8.6.0",
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "deploy": "cd cdk && pnpm deploy"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "cdk"
+  ],
+  "devDependencies": {
+    "turbo": "latest",
+    "typescript": "^5.2.2",
+    "@types/node": "^20.4.2",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.0.0",
+    "prettier": "^3.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.0"
+  }
+}
